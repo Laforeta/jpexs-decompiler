@@ -72,6 +72,7 @@ import com.jpexs.decompiler.flash.gui.Main;
 import com.jpexs.decompiler.flash.helpers.FileTextWriter;
 import com.jpexs.decompiler.flash.importers.BinaryDataImporter;
 import com.jpexs.decompiler.flash.importers.ImageImporter;
+import com.jpexs.decompiler.flash.importers.ShapeImporter;
 import com.jpexs.decompiler.flash.importers.SwfXmlImporter;
 import com.jpexs.decompiler.flash.tags.DefineBinaryDataTag;
 import com.jpexs.decompiler.flash.tags.DefineSpriteTag;
@@ -80,6 +81,7 @@ import com.jpexs.decompiler.flash.tags.base.ASMSource;
 import com.jpexs.decompiler.flash.tags.base.CharacterIdTag;
 import com.jpexs.decompiler.flash.tags.base.CharacterTag;
 import com.jpexs.decompiler.flash.tags.base.ImageTag;
+import com.jpexs.decompiler.flash.tags.base.ShapeTag;
 import com.jpexs.decompiler.flash.tags.base.SoundTag;
 import com.jpexs.decompiler.flash.treeitems.SWFList;
 import com.jpexs.decompiler.flash.types.ColorTransform;
@@ -1510,6 +1512,9 @@ public class CommandLineArgumentParser {
                         } else if (characterTag instanceof ImageTag) {
                             ImageTag imageTag = (ImageTag) characterTag;
                             new ImageImporter().importImage(imageTag, data);
+                        } else if (characterTag instanceof ShapeTag) {
+                            ShapeTag shapeTag = (ShapeTag) characterTag;
+                            new ShapeImporter().importImage(shapeTag, data);
                         } else if (characterTag instanceof SoundTag) {
                             SoundTag st = (SoundTag) characterTag;
                             int soundFormat = SoundFormat.FORMAT_UNCOMPRESSED_LITTLE_ENDIAN;
