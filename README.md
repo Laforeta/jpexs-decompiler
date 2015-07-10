@@ -1,8 +1,6 @@
-JPEXS Free Flash Decompiler 
+JPEXS Free Flash Decompiler - 5.3.0 Special Edition
 ================
 
-source code of opensource SWF decompiler
+Branched for a personal project. No longer maintained or updated. 
 
-Homepage: http://www.free-decompiler.com/flash/
-
-You can download ZIP / EXE releases on homepage.
+Please go to jindrapetrik/jpexs-decompiler for the latest source. 
